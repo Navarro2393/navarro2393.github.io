@@ -1,0 +1,115 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  overflow-x: auto;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  
+}
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #77aaff 3px solid;
+  animation: slideIn 1s forwards;
+}
+header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.main {
+  padding: 20px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  animation: fadeIn 2s forwards;
+}
+.section-title {
+  color: #333;
+  border-bottom: 2px solid #77aaff;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  position: relative;
+  animation: slideInLeft 1s forwards;
+}
+.section-title::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: #77aaff;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+.section-content {
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.contact-info, .education, .skills, .experience {
+  margin-bottom: 20px;
+}
+.contact-info ul, .education ul, .skills ul, .experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-info li, .education li, .skills li, .experience li {
+  padding: 5px 0;
+  animation: slideInRight 1s forwards;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+}
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
